@@ -5,9 +5,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
-
-" colorscheme
 Plug 'morhetz/gruvbox'
+
+
 
 " display lightline
 set laststatus=2
@@ -18,6 +18,8 @@ call plug#end()
 
 syntax on
 
+" colorscheme
+colorscheme gruvbox
 
 set background=dark "dark theme"
 set number
@@ -39,37 +41,38 @@ let python_highlight_all = 1 " highlight python syntaxis
 " cutoff spaces in python
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e `` 
 " smart indent after special words
-autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-
+autocmd bufread *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " mouse
 set mouse=a
 let g:is_mouse_enabled = 1
-noremap <silent> <Leader>m :call ToggleMouse()<CR>
-function! ToggleMouse()
-    if g:is_mouse_enabled == 1
-        echo "Mouse OFF"
-        set mouse=
-        let g:is_mouse_enabled = 0
-    else
-        echo "Mouse ON"
-        set mouse=a
-        let g:is_mouse_enabled = 1
-    endif
-endfunction
-
-" Reset search highlighting
-noremap <F4> :set hlsearch! hlsearch?<CR>
 
 " movements in insert mode
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
+inoremap <c-h> <left>
+inoremap <c-j> <down>
+inoremap <c-k> <up>
+inoremap <c-l> <right>
 
 " mappings
-map <C-n> :NERDTreeToggle<CR>
+map <c-n> :nerdtreetoggle<cr>
 iab pdb import pdb; pdb.set_trace()
+noremap <f4> :set hlsearch! hlsearch?<cr>
 
-colorscheme gruvbox
+" Ale
+let g:ale_fixers = {'python': ['isort', 'black']}
+let g:ale_linters = {'python': ['pylint', 'prospector', 'flake8']}
+let g:ale_completion_enabled = 1
+let g:ale_completion_delay = 1
+let g:airline#extensions#ale#enabled = 1
+let g:ale_set_highlights = 1
+let g:ale_lint_on_enter = 1
+
+
+" Ale fix
+nnoremap <f5> :ALEFix <CR>
+" Ale go to definition
+nnoremap <leader>gd :ALEGoToDefinition <CR>
+" Ale go to a next error
+nnoremap <leader>aj :ALENext<CR>
+
 
