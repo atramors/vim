@@ -69,6 +69,7 @@ inoremap <C-l> <Right>
 
 " mappings
 map <C-n> :NERDTreeToggle<CR>
+iab pdb import pdb; pdb.set_trace()
 
 colorscheme gruvbox
 
