@@ -15,11 +15,11 @@ set noshowmode
 call plug#end()
 
 syntax on
-
+let g:gruvbox_contrast_dark = 'hard'
 " colorscheme
 colorscheme gruvbox
 
-set background=dark "dark theme
+set background=dark
 set number
 set expandtab
 set tabstop=4
