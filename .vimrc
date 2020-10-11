@@ -8,11 +8,9 @@ Plug 'tpope/vim-surround'
 Plug 'morhetz/gruvbox'
 
 
-
 " display lightline
 set laststatus=2
 set noshowmode
-
 
 call plug#end()
 
@@ -21,7 +19,7 @@ syntax on
 " colorscheme
 colorscheme gruvbox
 
-set background=dark "dark theme"
+set background=dark "dark theme
 set number
 set expandtab
 set tabstop=4
@@ -29,9 +27,9 @@ set autoindent
 set fileformat=unix
 set textwidth=79
 set autoindent
-set hlsearch "highlight when search"
+set hlsearch "highlight when search
 set incsearch
-set mousehide "hide mouse when writing"
+set mousehide "hide mouse when writing
 set wrap
 set linebreak
 
@@ -67,9 +65,8 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_set_highlights = 1
 let g:ale_lint_on_enter = 1
 
-
-" Ale fix
-nnoremap <f5> :ALEFix <CR>
+" Ale fix python
+nnoremap <leader>pf :ALEFix <CR>
 " Ale go to definition
 nnoremap <leader>gd :ALEGoToDefinition <CR>
 " Ale go to a next error
