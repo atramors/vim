@@ -52,7 +52,7 @@ inoremap <c-k> <up>
 inoremap <c-l> <right>
 
 " mappings
-map <c-n> :nerdtreetoggle<cr>
+noremap <C-n> :NERDTreeToggle<cr>
 iab pdb import pdb; pdb.set_trace()
 noremap <f4> :set hlsearch! hlsearch?<cr>
 
