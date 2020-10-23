@@ -1,1 +1,1 @@
-My lightweight .vimrc config for working in Python with vim.
+My lightweight vim config.
