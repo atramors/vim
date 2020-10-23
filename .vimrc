@@ -24,14 +24,13 @@ set number
 set expandtab
 set tabstop=4
 set autoindent
-set fileformat=unix
 set textwidth=79
-set autoindent
 set hlsearch "highlight when search
 set incsearch
 set mousehide "hide mouse when writing
 set wrap
-set linebreak
+set fileformat=unix
+"set linebreak
 
 
 let python_highlight_all = 1 " highlight python syntaxis
