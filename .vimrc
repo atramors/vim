@@ -30,7 +30,7 @@ set incsearch
 set mousehide "hide mouse when writing
 set wrap
 set fileformat=unix
-"set linebreak
+set linebreak
 
 
 let python_highlight_all = 1 " highlight python syntaxis
