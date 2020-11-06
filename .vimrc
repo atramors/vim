@@ -1,23 +1,25 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
-Plug 'morhetz/gruvbox'
-
+Plug 'vim-python/python-syntax'
+Plug 'danilo-augusto/vim-afterglow'
 
 " display lightline
-set laststatus=2
-set noshowmode
+"set laststatus=2
+"set noshowmode
 
 call plug#end()
-
-syntax on
-let g:gruvbox_contrast_dark = 'hard'
+"syntax on
+let g:afterglow_use_italics=0
 " colorscheme
-colorscheme gruvbox
+"-----------------------
+
+colorscheme afterglow
+"-----------------------
 
 set background=dark
 set number
@@ -32,7 +34,6 @@ set wrap
 set fileformat=unix
 set linebreak
 
-
 let python_highlight_all = 1 " highlight python syntaxis
 
 " cutoff spaces in python
@@ -43,6 +44,7 @@ autocmd bufread *.py set smartindent cinwords=if,elif,else,for,while,try,except,
 " mouse
 set mouse=a
 let g:is_mouse_enabled = 1
+"-----------------------
 
 " movements in insert mode
 inoremap <c-h> <left>
@@ -54,6 +56,7 @@ inoremap <c-l> <right>
 noremap <C-n> :NERDTreeToggle<cr>
 iab pdb import pdb; pdb.set_trace()
 noremap <f4> :set hlsearch! hlsearch?<cr>
+"-----------------------
 
 " Ale
 let g:ale_fixers = {'python': ['isort', 'black']}
