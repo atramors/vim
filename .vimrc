@@ -6,19 +6,23 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 Plug 'vim-python/python-syntax'
-Plug 'morhetz/gruvbox'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
-" display lightline
-"set laststatus=2
-"set noshowmode
+
+
+"----------------------
 
 call plug#end()
+
 syntax on
 
-let g:gruvbox_contrast_dark = 'hard'
-"-----------------------
+if has('termguicolors')
+  set termguicolors
+endif
 
-colorscheme gruvbox
+
+"-----------------------
+colorscheme material 
 "-----------------------
 
 set background=dark
