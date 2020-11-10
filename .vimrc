@@ -6,19 +6,19 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 Plug 'vim-python/python-syntax'
-Plug 'danilo-augusto/vim-afterglow'
+Plug 'morhetz/gruvbox'
 
 " display lightline
 "set laststatus=2
 "set noshowmode
 
 call plug#end()
-"syntax on
-let g:afterglow_use_italics=0
-" colorscheme
+syntax on
+
+let g:gruvbox_contrast_dark = 'hard'
 "-----------------------
 
-colorscheme afterglow
+colorscheme gruvbox
 "-----------------------
 
 set background=dark
