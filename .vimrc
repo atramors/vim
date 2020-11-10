@@ -6,7 +6,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 Plug 'vim-python/python-syntax'
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'juanedi/predawn.vim'
 
 
 
@@ -16,13 +16,15 @@ call plug#end()
 
 syntax on
 
+
+
 if has('termguicolors')
   set termguicolors
 endif
 
 
 "-----------------------
-colorscheme material 
+colorscheme predawn 
 "-----------------------
 
 set background=dark
