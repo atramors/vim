@@ -30,7 +30,8 @@ colorscheme predawn
 set background=dark
 set number
 set expandtab
-set tabstop=4
+autocmd Filetype python setlocal tabstop=4 "set tabstop=4
+autocmd Filetype yaml setlocal tabstop=2
 set autoindent
 set textwidth=79
 set hlsearch "highlight when search
