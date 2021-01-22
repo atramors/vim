@@ -7,6 +7,7 @@ Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 Plug 'vim-python/python-syntax'
 Plug 'juanedi/predawn.vim'
+Plug 'tarekbecker/vim-yaml-formatter'
 
 
 
@@ -30,7 +31,8 @@ colorscheme predawn
 set background=dark
 set number
 set expandtab
-autocmd Filetype python setlocal tabstop=4 "set tabstop=4
+" set tabstop=4
+autocmd Filetype python setlocal tabstop=4
 autocmd Filetype yaml setlocal tabstop=2
 set autoindent
 set textwidth=79
