@@ -7,9 +7,6 @@ Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 Plug 'vim-python/python-syntax'
 Plug 'juanedi/predawn.vim'
-Plug 'tarekbecker/vim-yaml-formatter'
-
-
 
 "----------------------
 
@@ -42,8 +39,11 @@ set mousehide "hide mouse when writing
 set wrap
 set fileformat=unix
 set linebreak
+set spell
+hi clear SpellBad
+hi SpellBad cterm=underline
 
-let python_highlight_all = 1 " highlight python syntaxis
+let python_highlight_all = 1 " highlight python syntax
 
 " cutoff spaces in python
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e `` 
@@ -69,7 +69,7 @@ noremap <f4> :set hlsearch! hlsearch?<cr>
 
 " Ale
 let g:ale_fixers = {'python': ['isort', 'black']}
-let g:ale_linters = {'python': ['pylint', 'prospector', 'flake8']}
+let g:ale_linters = {'python': ['flake8']}  " 'pylint', 'prospector'
 let g:ale_completion_enabled = 1
 let g:ale_completion_delay = 1
 let g:airline#extensions#ale#enabled = 1
