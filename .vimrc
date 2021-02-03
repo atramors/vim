@@ -7,6 +7,7 @@ Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 Plug 'vim-python/python-syntax'
 Plug 'juanedi/predawn.vim'
+Plug 'tpope/vim-surround'
 
 "----------------------
 
