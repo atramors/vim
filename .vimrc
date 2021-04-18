@@ -8,6 +8,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-python/python-syntax'
 Plug 'juanedi/predawn.vim'
 Plug 'tpope/vim-surround'
+Plug 'majutsushi/tagbar'
 
 "----------------------
 
@@ -33,11 +34,18 @@ set expandtab
 autocmd Filetype python setlocal tabstop=4
 autocmd Filetype yaml setlocal tabstop=2
 set autoindent
-set textwidth=79
+" set textwidth=79
+set nowrap
+
 set hlsearch "highlight when search
 set incsearch
 set mousehide "hide mouse when writing
-set wrap
+
+" color column
+set cc=80 
+hi ColorColumn ctermbg=green guibg=red
+"----------------------
+
 set fileformat=unix
 set linebreak
 set spell
@@ -64,6 +72,7 @@ inoremap <c-l> <right>
 
 " mappings
 noremap <C-n> :NERDTreeToggle<cr>
+noremap <C-t> :TagbarToggle<cr>
 iab pdb import pdb; pdb.set_trace()
 noremap <f4> :set hlsearch! hlsearch?<cr>
 "-----------------------
