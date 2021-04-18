@@ -6,10 +6,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 Plug 'vim-python/python-syntax'
-Plug 'juanedi/predawn.vim'
 Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
+Plug 'morhetz/gruvbox'
 
+" Plug 'juanedi/predawn.vim'
 "----------------------
 
 call plug#end()
@@ -24,7 +25,8 @@ endif
 
 
 "-----------------------
-colorscheme predawn 
+" colorscheme predawn
+colorscheme gruvbox
 "-----------------------
 
 set background=dark
@@ -43,7 +45,7 @@ set mousehide "hide mouse when writing
 
 " color column
 set cc=80 
-hi ColorColumn ctermbg=green guibg=red
+hi ColorColumn ctermbg=green
 "----------------------
 
 set fileformat=unix
@@ -56,6 +58,7 @@ let python_highlight_all = 1 " highlight python syntax
 
 " cutoff spaces in python
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e `` 
+
 " smart indent after special words
 autocmd bufread *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
@@ -78,7 +81,7 @@ noremap <f4> :set hlsearch! hlsearch?<cr>
 "-----------------------
 
 " Ale
-let g:ale_fixers = {'python': ['isort', 'black']}
+let g:ale_fixers = {'python': ['isort',  'autopep8']}  " 'black'
 let g:ale_linters = {'python': ['flake8']}  " 'pylint', 'prospector'
 let g:ale_completion_enabled = 1
 let g:ale_completion_delay = 1
@@ -92,5 +95,4 @@ nnoremap <leader>pf :ALEFix <CR>
 nnoremap <leader>gd :ALEGoToDefinition <CR>
 " Ale go to a next error
 nnoremap <leader>aj :ALENext<CR>
-
 
